@@ -1,31 +1,25 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-xs-center">
-        <logo/>
-        <vuetify-logo/>
+  <v-layout row wrap fill-height>
+    <v-flex xs2>
+      <div class="text-xs-center mt-4">
+        <v-avatar size="125px">
+          <img
+            class="img-circle elevation-7 mb-1"
+            src="perfil.jpeg"
+          >
+        </v-avatar>
+        <div class="headline">Lucas <span style="font-weight:bold">Gaspareto</span></div>
+        <div class="subheading text-xs-center grey--text pt-1 pb-3">Javscript expert</div>
+        <v-layout column>
+          <nuxt-link to="/" class="body-2">Home</nuxt-link>
+          <a href="https://github.com/lucasfontesgaspareto" target="_blank" class="body-2">Github</a>
+          <h3 class="mt-4">Projetos</h3>
+          <nuxt-link to="/to-do-list" class="body-2">To-Do List</nuxt-link>
+        </v-layout>
       </div>
-      <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>.</p>
-          <p>If you have questions, please join the official <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat">discord</a>.</p>
-          <p>Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a href="https://nuxtjs.org/" target="_blank">Nuxt Documentation</a>
-          <br>
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank">Nuxt GitHub</a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="primary" flat nuxt to="/inspire">Continue</v-btn>
-        </v-card-actions>
-      </v-card>
+    </v-flex>
+    <v-flex xs10>
+      <nuxt-child></nuxt-child>
     </v-flex>
   </v-layout>
 </template>
